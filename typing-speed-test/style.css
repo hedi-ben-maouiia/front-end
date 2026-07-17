@@ -1,116 +1,8 @@
-/* Global variables */
-@font-face {
-    font-family: 'Sora';
-    src: 
-        local: 'Sora Regural',
-        url('./assets/fonts/Sora/static/Sora-Regular.ttf');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Sora';
-    src: 
-        local: 'Sora Semi-Bold',
-        url('./assets/fonts/Sora/static/Sora-SemiBold.ttf');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Sora';
-    src: 
-        local: 'Sora Bold',
-        url('./assets/fonts/Sora/static/Sora-Bold.ttf');
-    font-weight: 700;
-}
-
-:root {
-    --clr-neutral-900: hsl(0, 0%, 7%);
-    --clr-neutral-800: hsl(0, 0%, 15%);
-    --clr-neutral-500: hsl(240, 3%, 46%);
-    --clr-neutral-400: hsl(240, 1%, 59%);
-    --clr-neutral-0: hsl(0, 0%, 100%);
-
-    --clr-blue-600: hsl(214, 100%, 55%);
-    --clr-blue-400: hsl(210, 100%, 65%);
-    --clr-red-500: hsl(354, 63%, 57%);
-    --clr-green-500: hsl(140, 63%, 57%);
-    --clr-yellow-400: hsl(49, 85%, 70%);
-
-    --ff-base: "Sora", sans-serif;
-
-    --ff-regular: 400;
-    --ff-medium: 600;
-    --ff-bold: 700;
-}
-
-/* The CSS Reset */
-
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-*:not(dialog) {
-  margin: 0;
-}
-
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
-
-body {
-  /* 4. Increase line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-}
-
-/* 6. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 7. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
-}
-
-/* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-/* 9. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-/*
-  10. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
-
-/*Global styling */
-
-html {
-    font-size: 16px;
-    font-family: var(--ff-base);
-    font-weight: var(--ff-regular);
-}
 body {
     background-color: var(--clr-neutral-900);
     color: var(--clr-neutral-400);
     min-width: 100vw;
+    min-height: 100vh;
     /* margin: 24px 64px; */
 }
 
@@ -119,6 +11,8 @@ body {
 }
 
 .container {
+    width: 100vw;
+    min-height: 100vh;
     padding: 16px;
 }
 
@@ -139,7 +33,9 @@ body {
 .header .best-score span {
     color: var(--clr-neutral-0);
 }
-
+.main-content {
+    min-height: 100%;
+}
 .main-content .current-info {
     display: flex;
     justify-content: space-around;
@@ -198,6 +94,7 @@ body {
 }
 
 .typing-text  .text {
+    height: 100%;
     padding: 16px 0;
     line-height: 1.2;
     font-size: 2.25rem;
@@ -223,10 +120,15 @@ body {
     border-radius: 12px;
     font-weight: var(--ff-medium);
     margin-bottom: 20px;
+    cursor: pointer;
+}
 
+.typing-text .start-typing button:hover {
+    background-color: var(--clr-blue-400);
 }
 
 .typing-text .start-typing p {
     font-size: 1.2rem;
     font-weight: var(--ff-medium);
 }
+

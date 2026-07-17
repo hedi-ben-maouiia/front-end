@@ -1,69 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo-small.svg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-        <link rel="stylesheet" href="style.css">
-
-        <title>Frontend Mentor | Typing Speed Test</title>
-
-    </head>
-    <body>
-        <div class="container">
-            <header class="header">
-                <picture class="logo">
-                    <source srcset="./assets/images/logo-large.svg" media="(width > 600px)">
-                    <img src="./assets/images/logo-small.svg" alt=""> 
-                </picture>
-                <p class="best-score">Best: <span id="best-score">92 WPM</span> </p> 
-            </header>
-
-            <main class="main-content"> 
-                <nav>        
-                    <div class="current-info">
-                        <p>WPM: <span>0</span></p>
-                        <p>Accuracy: <span>100%</span></p>
-                        <p>Time: <span>0:60</span></p>    
-                    </div>
-                    <div class="difficulty-levels">
-                        <p class="level">Hard</p>
-                        <p class="mode">Timed(60s)</p>
-                    </div>
-                </nav>
-                <section class="typing-text">
-                    <p class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quisquam necessitatibus voluptatibus velit veniam! Neque voluptatum, quaerat nesciunt modi quas unde laborum asperiores alias culpa. Maiores unde assumenda architecto quas.
-                    </p>
-                    <div class="start-typing">
-                        <button>Start Typing Test</button>  
-                        <p>Or click the text and start typing</p>
-                    </div>
-                </section>
-            </main>
-
-        </div>
-
-        <!-- Passage -->
-
-
-        <!-- Test Complete Start -->
-        <!-- Test Complete! -->
-        <!-- Solid run. Keep pushing to beat your high score. -->
-        <!---->
-        <!-- WPM: <!-- WPM --> 
-        <!-- Accuracy: <!-- Accuracy --> 
-        <!-- Characters: <!-- Correct/Incorrect --> 
-        <!---->
-        <!-- Go Again -->
-        <!---->
-        <!-- <!-- Test Complete End -->
-        <!---->
-        <!-- <footer class="attribution"> -->
-        <!--     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.  -->
-        <!--     Coded by <a href="#">Your Name Here</a>. -->
-        <!-- </footer> -->
-    </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
