@@ -3,19 +3,19 @@ type Props = {
     options: string[]
 }
 
-export default function DeskMenu({
+export  function Menu({
     title,
     options,
 }: Props) {
   return (
     <div className="flex gap-2">
-        <p className="text-neutral-400">
+        <p className="text-md text-neutral-400">
             {title}: 
         </p>
         {
             options.map(option => 
                 <button
-                    className="text-neutral-0 size-fit px-4 border-2 border-solid border-neutral-400 rounded focus:text-blue-600 focus:border-blue-600 hover:outline-blue-500 hover:outline-2 hover:outline-offset-1"
+                    className="text-md text-neutral-0 size-fit px-4 border-2 border-solid border-neutral-400 rounded focus:text-blue-600 focus:border-blue-600 hover:outline-blue-500 hover:outline-2 hover:outline-offset-1"
                 >
                     {option}
                 </button>
